@@ -1,0 +1,22 @@
+<%- include('layout', { title: 'Home' , content: '' }) %>
+
+    <section>
+        <h2>Blog Posts</h2>
+        <% if (posts.length===0) { %>
+            <p>No posts yet. <a href="/new">Create one!</a></p>
+            <% } else { %>
+                <ul>
+                    <% posts.forEach(post=> { %>
+                        <li>
+                            <h3>
+                                <%= post.title %>
+                            </h3>
+                            <p>
+                                <%= post.content %>
+                            </p>
+                        </li>
+                        <% }); %>
+                </ul>
+                <% } %>
+    </section>
+    <%- include('footer') %>
