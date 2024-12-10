@@ -98,10 +98,10 @@ form button:hover {
   background-color: #28a745;
 }
 
-input:invalid,
+/* input:invalid,
 textarea:invalid {
   border: 2px solid red;
-}
+} */
 
 @media (max-width: 600px) {
   header nav a {

@@ -30,6 +30,32 @@ app.post('/new', (req, res) => {
   res.redirect('/');
 });
 
+app.get('/edit/:index', (req, res) => {
+  const postIndex = parseInt(req.params.index);
+  if (!isNaN(postIndex) && posts[postIndex]) {
+    res.render('edit', { post: posts[postIndex], index: postIndex });
+  } else {
+    res.redirect('/');
+  }
+});
+
+app.post('/edit/:index', (req, res) => {
+  const postIndex = parseInt(req.params.index);
+  if (!isNaN(postIndex) && posts[postIndex]) {
+    const { title, content } = req.body;
+    posts[postIndex] = { title, content };
+  }
+  res.redirect('/');
+});
+
+app.get('/delete/:index', (req, res) => {
+  const postIndex = parseInt(req.params.index);
+  if (!isNaN(postIndex) && posts[postIndex]) {
+    posts.splice(postIndex, 1); // Remove the post from the array
+  }
+  res.redirect('/'); // Redirect to the home page after deletion
+});
+
 // Start Server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

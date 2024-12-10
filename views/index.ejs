@@ -6,7 +6,7 @@
             <p>No posts yet. <a href="/new">Create one!</a></p>
             <% } else { %>
                 <ul>
-                    <% posts.forEach(post=> { %>
+                    <% posts.forEach((post, index)=> { %>
                         <li>
                             <h3>
                                 <%= post.title %>
@@ -14,6 +14,9 @@
                             <p>
                                 <%= post.content %>
                             </p>
+                            <a href="/edit/<%= index %>">Edit</a> |
+                            <a href="/delete/<%= index %>"
+                                onclick="return confirm('Are you sure you want to delete this post?');">Delete</a>
                         </li>
                         <% }); %>
                 </ul>
