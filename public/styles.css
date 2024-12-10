@@ -40,7 +40,7 @@ footer {
 
 /* Blog Post Styles */
 section {
-  margin-bottom: 2rem;
+  margin: 0 1rem 2rem 1rem;
 }
 
 section h2 {
@@ -93,15 +93,6 @@ form button:hover {
   border-radius: 5px;
   color: white;
 }
-
-.alert.success {
-  background-color: #28a745;
-}
-
-/* input:invalid,
-textarea:invalid {
-  border: 2px solid red;
-} */
 
 @media (max-width: 600px) {
   header nav a {

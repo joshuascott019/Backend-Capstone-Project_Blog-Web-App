@@ -51,9 +51,9 @@ app.post('/edit/:index', (req, res) => {
 app.get('/delete/:index', (req, res) => {
   const postIndex = parseInt(req.params.index);
   if (!isNaN(postIndex) && posts[postIndex]) {
-    posts.splice(postIndex, 1); // Remove the post from the array
+    posts.splice(postIndex, 1);
   }
-  res.redirect('/'); // Redirect to the home page after deletion
+  res.redirect('/');
 });
 
 // Start Server
