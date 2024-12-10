@@ -8,7 +8,7 @@ body {
 }
 
 header {
-  background-color: #007bff;
+  background-color: #1a3858;
   color: white;
   padding: 1rem;
   text-align: center;
@@ -44,7 +44,7 @@ section {
 }
 
 section h2 {
-  color: #007bff;
+  color: #1a3858;
 }
 
 ul {
@@ -75,7 +75,7 @@ form textarea {
 }
 
 form button {
-  background-color: #007bff;
+  background-color: #1a3858;
   color: white;
   border: none;
   padding: 0.7rem 1.5rem;
@@ -84,5 +84,16 @@ form button {
 }
 
 form button:hover {
-  background-color: #0056b3;
+  background-color: #1a3858;
+}
+
+.alert {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  color: white;
+}
+
+.alert.success {
+  background-color: #28a745;
 }
